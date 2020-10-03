@@ -26,8 +26,9 @@ public class BedrockBlocks implements ModInitializer {
                         DISABLED_BLOCKS = Config.loadDisabledBlocks();
                         PLAYER_WHITELIST = Config.loadPlayerWhitelist();
                         ServerPlayerEntity player = context.getSource().getPlayer();
-                        if (player != null)
+                        if (player != null) {
                             player.sendMessage(new LiteralText("§6[§eBedrockBlocks§6] §3has successfully been reloaded"), false);
+                        }
                         
                         return 1;
                     })
